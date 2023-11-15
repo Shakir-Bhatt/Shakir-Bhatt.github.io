@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Shakir | Portfolio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100">
-    <!-- Swiper.js-->
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
-    <!-- Leaflet-->
-    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-    <!-- Universal Parallax-->
-    <link rel="stylesheet" href="vendor/universal-parallax/universal-parallax.css">
-    <!-- Animate.css-->
-    <link rel="stylesheet" href="vendor/animate.css/source/animate.css">
-    <!-- Theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
-    <script src='js/jquery.min.js' type='text/javascript'></script>
-		<script src='js/main.js' type='text/javascript'></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light py-4 py-lg-0 fixed-top bg-white border-bottom">
-      <div class="container"><a class="navbar-brand font-serif text-uppercase h6 text-primary fw-bold mb-0" href="javascript:;" onclick="loadMainPage()">It Worker</a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" id="page-links">
-            <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='intro.html' itemprop='url'>Intro</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='about.html' itemprop='url'>About</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='services.html' itemprop='url'>Services</a></li>
-            <!-- <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='testimonial.html' itemprop='url'>Testimonials</a></li> -->
-            <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='mywork.html' itemprop='url'>My Work</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='techstack.html' itemprop='url'>Tech</a></li>
-            <!-- <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='contact.html' itemprop='url'>Contact</a></li> -->
-          </ul>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Shakir | Portfolio</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Google fonts-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100">
+  <!-- Swiper.js-->
+  <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+  <!-- Leaflet-->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <!-- Universal Parallax-->
+  <link rel="stylesheet" href="vendor/universal-parallax/universal-parallax.css">
+  <!-- Animate.css-->
+  <link rel="stylesheet" href="vendor/animate.css/source/animate.css">
+  <!-- Theme stylesheet-->
+  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/favicon.png">
+  <script src='js/jquery.min.js' type='text/javascript'></script>
+  <script src='js/main.js' type='text/javascript'></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light py-4 py-lg-0 fixed-top bg-white border-bottom">
+    <div class="container"><a class="navbar-brand font-serif text-uppercase h6 text-primary fw-bold mb-0"
+        href="javascript:;" onclick="loadMainPage()">It Worker</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" id="page-links">
+          <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='intro.html'
+              itemprop='url'>Intro</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='about.html'
+              itemprop='url'>About</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='services.html'
+              itemprop='url'>Services</a></li>
+          <!-- <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='testimonial.html' itemprop='url'>Testimonials</a></li> -->
+          <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='mywork.html'
+              itemprop='url'>My Work</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='techstack.html'
+              itemprop='url'>Tech</a></li>
+          <!-- <li class="nav-item"><a class="nav-link text-uppercase" href="javascript:;" page='contact.html' itemprop='url'>Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-area">
+    <section class="intro bg-cover bg-center d-flex align-items-center dark-overlay" id="intro"
+      style="background-image: url(img/home.jpg)">
+      <div class="overlay-content text-white w-100">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-11 mx-auto">
+              <div class="pb-5 mb-lg-5 wow fadeInDown"><img src="img/logo-big.png" alt="..." width="130"></div>
+              <h1 class="intro-heading mb-5 wow fadeInDown" data-wow-delay="0.3s">Hello!</h1>
+              <p class="h3 intro-text fw-normal wow fadeInUp" data-wow-delay="0.6s" id="intro-text">
+                I craft robust and dynamic web solutions, seamlessly integrating both frontend and backend
+                technologies to deliver comprehensive full-stack development.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    
-    <div class="content-area">
+    </section>
+  </div>
 
-    </div>
-    
-    <script type="text/javascript" src="includes/footer.js"></script>
+  <script type="text/javascript" src="includes/footer.js"></script>
 
-    <!-- JavaScript files-->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="vendor/waypoints/lib/noframework.waypoints.min.js"></script>
-    <script src="vendor/universal-parallax/universal-parallax.min.js"></script>
-    <script src="vendor/wow.js/wow.min.js"></script>
-    <script src="vendor/leaflet/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"></script>
-    <script src="vendor/mixitup/mixitup.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/theme.js"></script>
+  <!-- JavaScript files-->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/waypoints/lib/noframework.waypoints.min.js"></script>
+  <script src="vendor/universal-parallax/universal-parallax.min.js"></script>
+  <script src="vendor/wow.js/wow.min.js"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"></script>
+  <script src="vendor/mixitup/mixitup.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/theme.js"></script>
 
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </body>
+  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+
 </html>

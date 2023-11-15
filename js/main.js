@@ -14,13 +14,13 @@ function getPageByAjax(page){
             // Check the HTTP status code
             if (xhr.status === 200) {
                 // Success (200 OK)
-                $('.content-area').html(response).hide().fadeIn(2000);
-                $('.footer').fadeIn(2000);
+                $('.content-area').html(response).hide().fadeIn(1000);
+                $('.footer').fadeIn(1000);
             } else if (xhr.status === 304) {
                 // Not Modified (304)
                 // Handle this case if needed
-                $('.content-area').html(response).hide().fadeIn(2000);
-                $('.footer').fadeIn(2000);
+                $('.content-area').html(response).hide().fadeIn(1000);
+                $('.footer').fadeIn(1000);
             }
         },
         error: function (xhr) {
@@ -30,8 +30,8 @@ function getPageByAjax(page){
                 $('.content-area').html(`<div style="text-align: center;"><img src="img/404.png" alt="Not Found" style="max-width: 50%; height: auto; display: inline-block; margin-top: 50vh; transform: translateY(-50%);"></div>`).hide().fadeIn(2000);
             } else {
                 // Handle other error cases
-                $('.content-area').html(xhr.responseText).hide().fadeIn(2000);
-                $('.footer').fadeIn(2000);
+                $('.content-area').html(xhr.responseText).hide().fadeIn(1000);
+                $('.footer').fadeIn(1000);
             }
         } 
     });

@@ -1,1 +1,14 @@
 /* your styles go here */
+.project-img a {
+    border: 1px solid #dee2e5;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px 1px #4750569e;
+}
+#item1Modal img {
+    border: 1px solid #dee2e5;
+    box-shadow: 1px 2px 6px 2px #4750569e;
+}
+
+#item1Modal .modal-content{
+    border-radius: 5px;
+}

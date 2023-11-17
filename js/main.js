@@ -9,8 +9,9 @@ function getPageByAjax(page){
 	$.ajax({
         method: "GET",
         dataType: "text/html",
-        url: page,
+        url: `pages/${page}.html`,
         success: function (response, textStatus, xhr) {
+            history.pushState(null, null, `?page=${page}`);
             // Check the HTTP status code
             if (xhr.status === 200) {
                 // Success (200 OK)
@@ -29,6 +30,7 @@ function getPageByAjax(page){
                 // Not Found (404)
                 $('.content-area').html(`<div style="text-align: center;"><img src="img/404.png" alt="Not Found" style="max-width: 50%; height: auto; display: inline-block; margin-top: 50vh; transform: translateY(-50%);"></div>`).hide().fadeIn(2000);
             } else {
+                history.pushState(null, null, `?page=${page}`);
                 // Handle other error cases
                 $('.content-area').html(xhr.responseText).hide().fadeIn(1000);
                 $('.footer').fadeIn(1000);
@@ -45,14 +47,14 @@ $(document).ready(function(){
         var page = $(this).attr('page');
         localStorage.setItem('page',page);
         //$(this).css('color','#0175c6');
-        getPageByAjax('pages/'+page);
+        getPageByAjax(page);
         // if($(window).width() <= 1024){
         //     $('.nav-sidebar-area').toggleClass('open');
         // } 
     });
 
 	if (localStorage.getItem('page') != null) {
-        getPageByAjax('pages/'+localStorage.getItem('page'));
+        getPageByAjax(localStorage.getItem('page'));
         $('#page-links li a').each(function(e){
             if($(this).attr('page') == localStorage.getItem('page')){
                //$(this).css('color','#0175c6'); 
@@ -86,7 +88,6 @@ $(document).ready(function(){
 
 function loadMainPage(){
     localStorage.removeItem('page');
-    //window.location.href = window.location.href;
-    localStorage.setItem('page','intro.html');
-    getPageByAjax('pages/intro.html');
+    localStorage.setItem('page','intro');
+    getPageByAjax('intro');
 }

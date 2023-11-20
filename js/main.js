@@ -48,6 +48,7 @@ $(document).ready(function(){
         localStorage.setItem('page',page);
         //$(this).css('color','#0175c6');
         getPageByAjax(page);
+        $('.navbar-toggler-icon').click();
         // if($(window).width() <= 1024){
         //     $('.nav-sidebar-area').toggleClass('open');
         // } 

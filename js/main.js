@@ -43,48 +43,47 @@ function getPageByAjax(page){
 $(document).ready(function(){
 
     $('#page-links li a').on('click',function(e){
-        //$('#page-links li a').css('color','#fff');
         var page = $(this).attr('page');
         localStorage.setItem('page',page);
-        //$(this).css('color','#0175c6');
         getPageByAjax(page);
-        $('.navbar-toggler-icon').click();
-        // if($(window).width() <= 1024){
-        //     $('.nav-sidebar-area').toggleClass('open');
-        // } 
+        if (window.innerWidth < 992) { // to avoid flickring issue
+            $('.navbar-toggler-icon').click();
+        }
+        $('.nav-link').removeClass('selected-nav');
+        $(this).addClass('selected-nav');
     });
 
 	if (localStorage.getItem('page') != null) {
         getPageByAjax(localStorage.getItem('page'));
         $('#page-links li a').each(function(e){
             if($(this).attr('page') == localStorage.getItem('page')){
-               //$(this).css('color','#0175c6'); 
+               $(this).addClass('selected-nav');
             }
         });
     }
 
-    $('.color-selector span i').on('click',function(){
-        var colorToSet = $(this).attr('style').trim();
-        colorToSet = colorToSet.split(':')[1].slice(0,-1).trim();
-        $('.nav-sidebar-area').css('background',colorToSet);
-        $('body > .wrapper').css('background',colorToSet);
-        localStorage.setItem('background-color',colorToSet);
-        $('.color-selector span').css('border','0');
-        $(this).parent().css('border','2px solid #fff');
-        localStorage.setItem('selected-color','2px solid #fff');
-    });
-    if (localStorage.getItem('background-color') != null) {
-        $('.nav-sidebar-area').css('background',localStorage.getItem('background-color'));
-        $('body > .wrapper').css('background',localStorage.getItem('background-color'));
-            ;
-        $('.color-selector span i').each(function(e){
-            var selectedColor = $(this).attr('style').trim();
-            selectedColor = selectedColor.split(':')[1].slice(0,-1).trim();
-            if(selectedColor == localStorage.getItem('background-color')){
-                $(this).parent().css('border','2px solid #fff');
-            }
-        });
-    }
+    // $('.color-selector span i').on('click',function(){
+    //     var colorToSet = $(this).attr('style').trim();
+    //     colorToSet = colorToSet.split(':')[1].slice(0,-1).trim();
+    //     $('.nav-sidebar-area').css('background',colorToSet);
+    //     $('body > .wrapper').css('background',colorToSet);
+    //     localStorage.setItem('background-color',colorToSet);
+    //     $('.color-selector span').css('border','0');
+    //     $(this).parent().css('border','2px solid #fff');
+    //     localStorage.setItem('selected-color','2px solid #fff');
+    // });
+    // if (localStorage.getItem('background-color') != null) {
+    //     $('.nav-sidebar-area').css('background',localStorage.getItem('background-color'));
+    //     $('body > .wrapper').css('background',localStorage.getItem('background-color'));
+    //         ;
+    //     $('.color-selector span i').each(function(e){
+    //         var selectedColor = $(this).attr('style').trim();
+    //         selectedColor = selectedColor.split(':')[1].slice(0,-1).trim();
+    //         if(selectedColor == localStorage.getItem('background-color')){
+    //             $(this).parent().css('border','2px solid #fff');
+    //         }
+    //     });
+    // }
 });
 
 function loadMainPage(){

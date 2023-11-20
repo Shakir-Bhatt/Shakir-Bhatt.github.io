@@ -18,3 +18,7 @@
     margin: 0 auto;
     max-width: 100%;
 }
+.selected-nav {
+    color: #4ebfa8 !important;
+    font-weight: 900;
+}

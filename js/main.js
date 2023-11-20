@@ -2,7 +2,7 @@
 /*
 *	For single page application, Get page on link click and load in content-area.
 */
-var loader = '<img src="img/hexagon.gif" alt="loading page" style="margin-left: 27%;max-width: 50%;">'
+var loader = '<img src="img/hexagon.gif" alt="loading page" id="page-loader">'
 function getPageByAjax(page){
     $('.footer').hide();
 	$('.content-area').html(loader);

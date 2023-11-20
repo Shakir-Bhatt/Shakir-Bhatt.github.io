@@ -9,6 +9,12 @@
     box-shadow: 1px 2px 6px 2px #4750569e;
 }
 
-#item1Modal .modal-content{
+#item1Modal .modal-content {
     border-radius: 5px;
+}
+
+#page-loader {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
